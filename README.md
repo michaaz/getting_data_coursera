@@ -1,6 +1,7 @@
 # getting_data_coursera
 Final assignment for the Coursera course Getting and Cleaning Data
-*Michal T*
+
+author: *MT*
 
 
 The repository contains an R script *run_analysis.R*, a text file *clean.txt*.
