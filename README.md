@@ -23,7 +23,7 @@ The purpose of the *run_analysiss.R* script is to:
 * summarize the data with respect to certain subgroups
 * export the clean data into a text file
 
-# Info about trhe original data
+# Info about the original data
 
 The original data set can be downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -114,7 +114,7 @@ The script schould be in the same directory as the folder wkith the original dat
 From the *test* folder the script reads the data from the *X_test.txt* and *y_test.txt* and similarly from the train folder the data in *X_train.txt* and *y_train.txt*. Then the train and test datasets are merged together to create one dataframe. Also the records of the subject used at each window are merged from the *subject_test.txt* and *subject_train.txt* files.
 
 ## Cleaning
-The names of the features whose values are recorded in the columns of the merged data are read from the *features.txt* file and are used as the names of the columns in the data set. The names of activities associated with the test labels are read from the *activity_labels.txt* file and are used instead of the levels 1-6. These are stored in the column named *activity*. The column with the subject used in each observation is called *subject*
+The names of the features whose values are recorded in the columns of the merged data are read from the *features.txt* file and are used as the names of the columns in the data set. The names of activities associated with the test labels are read from the *activity_labels.txt* file and are used instead of the levels 1-6. These are stored in the column named `activity`. The column with the subject used in each observation is called `subject`. Also, the names of the columns were modified to follow standard naming conventions, in particular `(`, `)` and `-` characters were removed.
 
 ## Subsetting 
 For further analysis only the measurements on the mean and standard deviation for each measurement were kept. In particular any features based on the mean or standard deviation were removed from the data set.
