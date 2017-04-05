@@ -21,12 +21,12 @@ The purpose of the *run_analysiss.R* script is to:
 
 The original data set can be downloaded from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-Below is the description of the structure of the original data set copied from the olriginal README.txt file.
+Below is the description of the structure of the original data set copied from the olriginal README.txt file. Formatting has been changed.
 
-==================================================================
+__________________________________________________________________
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-==================================================================
+__________________________________________________________________
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
