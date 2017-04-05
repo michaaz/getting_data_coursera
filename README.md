@@ -29,21 +29,21 @@ The original data set can be downloaded from https://d396qusza40orc.cloudfront.n
 
 Below is the description of the structure of the original data set copied from the olriginal README.txt file. Formatting has been changed.
 
-_______________________________________________________________________________________
+________________________________________________________________________________
 BEGINNING OF THE ORIGINAL README.txt FILE
-_______________________________________________________________________________________
+________________________________________________________________________________
 
-__________________________________________________________________
+________________________________________________________________________________
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
-__________________________________________________________________
+________________________________________________________________________________
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
 DITEN - Università degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
-==================================================================
+________________________________________________________________________________
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
@@ -103,9 +103,9 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
-_______________________________________________________________________________________
+_________________________________________________________________________________
 END OF THE ORIGINAL README.txt FILE
-_______________________________________________________________________________________
+_________________________________________________________________________________
 
 # Details about the script
 
@@ -116,6 +116,13 @@ The script schould be in the same directory as the folder wkith the original dat
 From the *test* folder the script reads the data from the *X_test.txt* and *y_test.txt* and similarly from the train folder the data in *X_train.txt* and *y_train.txt*. Then the train and test datasets are merged together to create one dataframe. Also the records of the subject used at each window are merged from the *subject_test.txt* and *subject_train.txt* files.
 
 ## Cleaning
-The names of the features whose values are recorded in the columns of the merged data are read from the *features.txt* file and are used as the coulmns in the data set. The names of activities associated with the test labels are read from the *activity_labels.txt* file and are used instead of the levels 1-6. These are stoired in the column named *activity*. The column with the subject used in each observation is called *subject*
+The names of the features whose values are recorded in the columns of the merged data are read from the *features.txt* file and are used as the names of the columns in the data set. The names of activities associated with the test labels are read from the *activity_labels.txt* file and are used instead of the levels 1-6. These are stored in the column named *activity*. The column with the subject used in each observation is called *subject*
 
 ## Subsetting 
+For further analysis only the measurements on the mean and standard deviation for each measurement were kept. In particular any features based on the mean or standard deviation were removed from the data set.
+
+## Summarization of the data
+For the data set obtained by the steps described above, we calculated the mean of each of the selected features within each subject/activity pair.
+
+## Clean data set
+A new data set was created that was obtained from the original set using the transformations described in the steps above and saved in the text file *clean.txt*.
