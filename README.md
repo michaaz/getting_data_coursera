@@ -6,7 +6,13 @@ author: *MT*
 
 # Summary
 
-The repository contains an R script *run_analysis.R*, a text file *clean.txt*.
+## Content
+The repository contains
+* *README.txt* file
+* a script *run_analysis.R*
+* clean data in  *clean.txt*.
+
+## Goal 
 
 The purpose of the *run_analysiss.R* script is to:
 * load the provided data set contained in the folder UCI HAR Dataset
@@ -100,3 +106,4 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 _______________________________________________________________________________________
 END OF THE ORIGINAL README.txt FILE
 _______________________________________________________________________________________
+
