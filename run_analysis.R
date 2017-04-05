@@ -1,6 +1,5 @@
 rm(list = ls())
-library("data.table")
-library("dplyr")
+library("dtplyr")
 
 
 #    Reading the features names
@@ -37,6 +36,15 @@ setnames(X, names(X), features)
 clean.indices <- grep("mean[(]|std[(]", names(X))
 X.clean <- X[,clean.indices]
 
+
+# modifying the names of features so that they follow naming conventions
+new_names<-make.names(names(X.clean))
+new_names<-gsub("(\\.){2,}", ".", new_names)
+new_names<-gsub("(\\.)$", "", new_names)
+setnames(X.clean, names(X.clean), new_names)
+
+
+
 # adding activity and subject columns to the data
 df <- cbind(X.clean, activity.labels[y[,1]])
 setnames(df,names(df)[length(names(df))], "activity")
@@ -50,4 +58,5 @@ clean_df <- df %>%
   summarise_each(funs(mean))
 
 # exporting the clean data to a text file "clean.txt" 
-write.table(clean_df, "clean.txt")
+write.table(clean_df, "clean.txt", row.names = FALSE)
+

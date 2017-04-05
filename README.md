@@ -108,7 +108,7 @@ ________________________________________________________________________________
 # Details about the script
 
 ## Preparation
-The script schould be in the same directory as the folder wkith the original dataset *UCI HAR Datase*. 
+The current working directory should conatin the folder with the original dataset *UCI HAR Datase*. 
 
 ## Data merging
 From the *test* folder the script reads the data from the *X_test.txt* and *y_test.txt* and similarly from the train folder the data in *X_train.txt* and *y_train.txt*. Then the train and test datasets are merged together to create one dataframe. Also the records of the subject used at each window are merged from the *subject_test.txt* and *subject_train.txt* files.
