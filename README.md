@@ -107,3 +107,15 @@ ________________________________________________________________________________
 END OF THE ORIGINAL README.txt FILE
 _______________________________________________________________________________________
 
+# Details about the script
+
+## Preparation
+The script schould be in the same directory as the folder wkith the original dataset *UCI HAR Datase*. 
+
+## Data merging
+From the *test* folder the script reads the data from the *X_test.txt* and *y_test.txt* and similarly from the train folder the data in *X_train.txt* and *y_train.txt*. Then the train and test datasets are merged together to create one dataframe. Also the records of the subject used at each window are merged from the *subject_test.txt* and *subject_train.txt* files.
+
+## Cleaning
+The names of the features whose values are recorded in the columns of the merged data are read from the *features.txt* file and are used as the coulmns in the data set. The names of activities associated with the test labels are read from the *activity_labels.txt* file and are used instead of the levels 1-6. These are stoired in the column named *activity*. The column with the subject used in each observation is called *subject*
+
+## Subsetting 
